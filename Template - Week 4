@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Template</title>
+</head>
+<body>
+<script>
+
+</script>
+
+<input type="text" id="input information">
+<button></button>
+<div></div>
+</body>
+</html>
+
