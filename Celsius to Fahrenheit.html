@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang ="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Convert Celsius to Fahrenheit</title>
+
+            <script>
+                function celsToFahr() {
+                    /*Input: input celsius
+                     *Processing: compute
+                     *Output: Fahrenheit
+                    */
+
+                    let text = document.getElementById("celsiusInputBox").value;
+                    let c = parsFloat(text);
+                    let f = c * 9 / 5 + 32;
+
+                    document.getElementById("fahrenDiv").innerHTML = f;
+                }
+            </script>
+    </head>
+
+    <body>
+
+       Enter a temperature in Celsius <input type=text id="celsiusInputBox">
+       <button type="button" onClick="celsToFahr()">convert</button>
+
+       <div id="fahrenDiv"></div>
+    
+
+    </body>
+</html>

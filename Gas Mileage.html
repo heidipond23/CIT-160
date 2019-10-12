@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Gas Mileage</title>
+<script>
+
+function computeGasMileage(){
+
+    /*Input: beginning odometer
+     *Input: ending odomenter
+     *Input: gallons used
+     *Processing: compute
+     *Output: gase mileage
+     *Round to 2 digits
+    */
+    let start = parseFloat(document.getElementById("beginning").value);
+    let end = parseFloat(document.getElementById("ending").value);
+    let gas = parseFloat(document.getElementById("gasUsed").value);
+    let mileage =  (end - start) / gas;
+
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    let rounded = Math.round(mileage * multiplier) / multiplier;
+
+    document.getElementById("gasMileage").innerHTML = "Gas Mileage: " + rounded;
+}
+
+</script>
+</head>
+
+<body>
+        <h1>Gas Mileage</h1>
+        Beginning Mileage <input type="text" id="beginning"><br>
+        Ending Mileage <input type="text" id="ending"><br>
+        Gallons used <input type="text" id="gasUsed"><br>
+        <button type="button" onclick="computeGasMileage()">Click for Gas Mileage</button><br>
+        <div id="gasMileage"></div>
+</body>
+</html>
