@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Choose Footware</title>
+    <script>
+        function chooseFootware() {
+            let weather = document.getElementById("weatherBox").value;
+            let footware;
+
+           switch (weather) {
+                case "hot":
+                   footware = "sandals";
+                   break;
+                case "rain":
+                    footware = "golashes";
+                    break;
+                case "snow":
+                    footware = "boots";
+                    break;
+           
+               default:
+                    footware = "shoes";
+                   break;
+           }
+            
+        
+        
+            document.getElementById("outputDiv").innerHTML = "Today you should wear " + footware + ".";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>What footware should you wear today?</h1>
+    What is today's weather? <br>
+    <input type="text" id="weatherBox">
+    <button type="button" onclick="chooseFootware()">Click</button>
+    <br>
+    <br>
+    <div id="outputDiv"></div>
+
+</body>
+
+</html>

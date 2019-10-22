@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Math Quiz</title>
+    <script>
+       // input = first number
+       // input = operater
+       // input = second number
+       // input = solution
+       // processing = 
+       // ouput = correct/inocrrect message
+    function checkAnswer(){
+        let firstNumber = parseInt(document.getElementById("numberOne").value);
+        let operator = document.getElementById("symbol").value;
+        let secondNumber = parseInt(document.getElementById("numberTwo").value);
+        let theirGuess = parseInt(document.getElementById("answer").value);
+
+        let solution;
+        let message;
+
+
+        switch (operator) {
+            case "+":
+                solution = firstNumber + secondNumber
+                break;
+            case "-":
+                solution = firstNumber - secondNumber
+                break;
+            case "*":
+                solution = firstNumber * secondNumber
+                break;
+            case "/":
+                solution = firstNumber / secondNumber
+                break;
+
+        }
+      
+        if (theirGuess === solution) {
+            message = "Great job! That is correct";
+            
+        } else{
+            message = "Oops! Try again.";
+        }
+
+        document.getElementById("outputDiv").innerHTML = message;
+
+    }
+    </script>
+
+</head>
+    <body>
+        <h1 style="text-align:center;">Math Checker</h1>
+
+        <input type="text" id="numberOne" size="5">
+        <input type="text" id="symbol" size="3">
+        <input type="text" id="numberTwo" size="5">
+        =
+        <input type="text" id="answer" size="5">
+
+        <button type="button" onclick="checkAnswer()">Check Answer</button>
+        <br>
+        <br>
+        <div id="outputDiv"></div>
+        
+
+    </body>
+
+</html>
