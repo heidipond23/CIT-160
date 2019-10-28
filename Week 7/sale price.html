@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+   
+    <meta charset="utf-8">
+    <title>Sale Total</title>
+    <script>
+     /*
+    *input: customer's subtotal
+    *input: what day of the week is it?
+    *processing: if total >$50 && tuesday or Wednesday, 
+    then subtract 10% from subtotal. 
+    then add tax.
+    *output:new total
+    */
+    function saleTotal() {
+        let subtotal = parseFloat(document.getElementById("input").value);
+        let dayOfWeek = new Date().getDay();
+        let totalPreTax;
+        
+
+        if ((subtotal > 50) && (dayOfWeek == 2 || dayOfWeek == 3)){
+            totalPreTax = subtotal - (subtotal * .1)
+        }
+        else{
+            totalPreTax = subtotal
+        }
+
+        let totalPostTax = totalPreTax + (totalPreTax * .06)
+        let rounded = Math.round(totalPostTax * 100) / 100;
+        document.getElementById("outputDiv").innerHTML = "The total is $" + rounded;
+
+    }
+    </script>
+
+
+</head>
+    <body>
+        <h1 style="text-align:center">Compute Customer's Total</h1>
+        <p>Customer's sub-total:</p>
+        $
+        <input type="text" id="input" size="4">
+        <button type="button" onclick="saleTotal()">purchase total</button>
+        <div id="outputDiv"></div>
+    </body>
+
+</html>

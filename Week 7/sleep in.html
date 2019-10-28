@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Can I sleep in today?</title>
+    <script>
+        /* input: day of week (mon-fri) else
+         * input: month (Jan, July, Dec)
+         * input: date (Jan 1, July 4, Dec 25)
+         * processing: if Monday - Friday (get up) 
+         * processing: if weekend (sleep in) 
+         * processing: if Jan 1 (sleep in)
+         * processing: if July 4 (sleep in)
+         * Processing: if December 25 (sleep in)
+         * output: message sleep in. message get up!
+         */
+
+        function sleepIn() {
+            let now = new Date();
+            let month = now.getMonth();
+            let dayOfMonth = now.getDate();
+            let dayOfWeek = now.getDay();
+            let message;
+
+            if (month == 0 && dayOfMonth == 1){
+                message = "Sleep in."
+            }
+            if (month == 6 && dayOfMonth == 4){
+                message ="Sleep in."
+            }
+            if (month == 11 && dayOfMonth == 25){
+                message = "Sleep in."
+            }
+            
+            if (dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5){
+                message = "Get up!"
+            }
+            else{
+                message = "Sleep in."
+            }
+        document.getElementById("outputDiv").innerHTML = message;
+          
+
+        }
+    </script>
+
+</head>
+    <body>
+        <h1 style="text-align:center">Can I Sleep In Today?</h1>
+        <button type="button" onclick="sleepIn()">Click for Answer</button>
+        <div id="outputDiv"></div>
+    </body>
+
+</html>
