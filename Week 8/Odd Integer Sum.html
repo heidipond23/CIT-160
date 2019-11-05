@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Template</title>
+<script>
+    function intSum() {
+        let sum = 0;
+        let n = parseInt(document.getElementById("inputInt").value);
+        for (let i = 1; i <= n; i = i + 2) {
+          sum = sum + i; 
+           
+        }
+        document.getElementById("output").innerHTML = sum;
+    }
+
+</script>
+</head>
+<body>
+    <h1 style="text-align:center">Sum of Odd Integers</h1>
+
+Enter any integer
+<input type="text" size="5" id="inputInt"><br/>
+<button onclick="intSum()">GO!</button>
+<div id="output"></div>
+</body>
+</html>
