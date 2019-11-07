@@ -2,25 +2,22 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>5 Times Table</title>
 
 </head>
 <body>
     <h1 style="text-align:center">5 Times Table</h1>
    <script>
-//input:
-//processing:
-//output:
-
-//create a counting loop
-//multiply 5 by the incrementor
-//write the value of each loop
-
-
-for (let index = 1; index <= 12; index++)
-{
-    document.write("5 x " + index + " = " + (5 * index) + "<br/>");
-} 
+    function timesTable(){
+        let output = "";
+        for (let index = 1; index <= 12; index++)
+        {
+        output += "5 x " + index + " = " + (5 * index) + "<br/>";
+        document.getElementById("outputDiv").innerHTML = output;
+        } 
+    }
 </script>
+<button onclick="timesTable()">Go!</button>
+<div id="outputDiv"></div>
 </body>
 </html>
