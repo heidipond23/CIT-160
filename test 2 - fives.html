@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Fives</title>
+<script>
+/* Input: number "one" and number "two"
+ * Processing: if "one" >5 && "two">5 || "one" + "two >20" 
+ * Output: message true, else. message false
+ */
+
+ function fives(){
+     let firstNumber = parseFloat(document.getElementById("one").value);
+     let secondNumber = parseFloat(document.getElementById("two").value);
+     let message;
+
+    if ((firstNumber > 5 && secondNumber > 5) || (firstNumber + secondNumber > 20)){
+        message = "True"
+    }
+    else{
+        message = "False"
+    }
+
+
+    document.getElementById("output").innerHTML = message;
+ }
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="fives()">Click</button>
+<div id="output"></div>
+</body>
+</html>

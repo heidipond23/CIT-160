@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Divisible Integers</title>
+<script>
+/* Input: start number, end number, divisor
+ * Processing:
+ * Output: all numbers between start and end that evenly divide by "divisor"
+ */
+ function divisibleIntegers(){
+    let startNumber = parseInt(document.getElementById("start").value);
+    let endNumber = parseInt(document.getElementById("end").value);
+    let divisor = parseInt(document.getElementById("divisorInput").value);
+    let output = "";
+        for (i = startNumber; i <= endNumber ;i++) 
+        {
+            if ((i % divisor) == 0){
+            output += i + " ";
+            }
+           
+        }  
+        document.getElementById("outputDiv").innerHTML = output;
+ }
+
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisorInput" size="5"><br>
+<button type="button" onclick="divisibleIntegers()">Click</button>
+<div id="outputDiv"></div>
+</body>
+</html>
