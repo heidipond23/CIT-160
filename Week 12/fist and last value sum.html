@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+        <meta charset="utf-8">
+        <title>Sum of First and Last Values</title>
+</head>
+<body>
+        <h1>Sum of First and Last Values</h1>
+        <div id="outputDiv"></div>
+        <script>
+            //input: user input list
+            //processing: access first and last element - give new values - find sum
+            //output: sum to div
+
+            var list = [5, -2.1, 6.3, 9, 5, 13];
+            var value = parseFloat(addEnds(list));
+            document.getElementById("outputDiv").innerHTML = value;
+            function addEnds(list){
+                let firstNum = list[0];
+                let lastNum = list[list.length-1];
+                let sum = (firstNum + lastNum);
+                return sum; 
+            }
+        </script>  
+</body>
+</html>

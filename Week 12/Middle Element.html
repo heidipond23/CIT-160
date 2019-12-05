@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset = "utf-8">
+    <title>Middle Elelement</title>  
+</head>
+<body>
+    <h1>Middle Element</h1>
+    <div id="outputDiv"></div>
+    <script>
+
+        var list = [ 12, 4, 8, 15, 17, 5];
+        var value = getMiddle(list);
+        document.getElementById("outputDiv").innerHTML = value;
+
+        function getMiddle(list){
+            let arrayLength = list.length;
+
+            if((arrayLength % 2) != 0){
+                let middleIndex = Math.floor((arrayLength - 1) / 2);
+                return list[middleIndex];
+            }
+                let middleIndex = Math.floor((arrayLength - 1) / 2);
+                return (list[middleIndex + 1] + list[middleIndex]) / 2;
+
+        }
+
+    </script>
+</body>
+</html>
