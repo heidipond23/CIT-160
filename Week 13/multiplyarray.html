@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset = "utf-8">
+    <title>Multiply Array</title>  
+</head>
+<body>
+    <div id="outputDiv"></div>
+    <script>
+        let list = [ 17, 8, 9, 5, 20 ];
+        let multiplier = 3;
+        let products = multiply(list, multiplier);
+
+
+        function multiply(list, multiplier){
+            let array = new Array(list.length);
+            for (let i = 0; i < list.length; i++) {
+                array[i] = list[i] * multiplier;  
+            }
+            return array;
+        }
+        
+    
+    </script>
+</body>
+</html>
